@@ -408,15 +408,15 @@
       var host = atob('aHR0cHM6Ly9wLmx1bWV4LnNwYWNl');
       var ref = host + '/';
       var user_agent = Utils.baseUserAgent();
-      var headers = Lampa.Platform.is('android') ? {
+      var headers = {
         'Origin': host,
         'Referer': ref,
         'User-Agent': user_agent,
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-site'
-      } : {};
-      var headers2 = Lampa.Platform.is('android') ? {
+      };
+      var headers2 = {
         'Origin': host,
         'Referer': ref,
         'User-Agent': user_agent,
@@ -425,7 +425,7 @@
         'Sec-Fetch-Site': 'same-site',
         'Cookie': '',
         'x-csrf-token': ''
-      } : {};
+      };
       var prox_enc = '';
 
       if (prox) {
