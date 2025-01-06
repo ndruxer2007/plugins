@@ -10134,16 +10134,14 @@
         source: new lumex(this, object),
         search: false,
         kp: false,
-        imdb: true,
-        disabled: false /*disable_dbg && !androidHeaders*/
+        imdb: true
       }, {
         name: 'rezka',
         title: 'Voidboost',
         source: new rezka(this, object),
         search: false,
         kp: true,
-        imdb: true,
-        disabled: true
+        imdb: true
       }, {
         name: 'rezka2',
         title: 'HDrezka',
@@ -10268,8 +10266,7 @@
         source: new kinopub(this, object),
         search: true,
         kp: false,
-        imdb: true,
-        disabled: true
+        imdb: true
       }];
       var obj_filter_sources = all_sources.filter(function (s) {
         return !s.disabled;
